@@ -21,9 +21,9 @@ def flour_order(large_thick, large_thin, medium_thick, medium_thin):
     :return:integer, string, integer
     """
 
-    total_flour = flour_amount(large_thick, large_thin, medium_thick, medium_thin)
-    money_on_a = money_spent_on_a(total_flour)
-    money_on_b = money_spent_on_b(total_flour)
+    total_flour = int(flour_amount(large_thick, large_thin, medium_thick, medium_thin))
+    money_on_a = int(money_spent_on_a(total_flour))
+    money_on_b = int(money_spent_on_b(total_flour))
     print('We need to order ' + str(total_flour) + ' kg of flour, which costs ' + str(
         money_on_a) + ' VND if we buy from A and ' + str(money_on_b) + ' VND if we buy from B.')
     if money_on_a <= money_on_b:
@@ -52,9 +52,10 @@ def flour_amount(large_thick, large_thin, medium_thick, medium_thin):
     :param medium_thin:
     :return: integer
     """
-    # Calculate the actual amount of flour needed to
-    actual_amount_of_flour = round_up_to_even(
-        large_thick * 0.55 + large_thin * 0.5 + medium_thick * 0.45 + medium_thin * 0.4) * 106 / 100
+    # Calculate the actual amount of flour needed to make the pizzas
+    flour_needed = (large_thick * 0.55 + large_thin * 0.5 + medium_thick * 0.45 + medium_thin * 0.4) * 106 / 100
+    # Round up to even the amount of flour needed
+    actual_amount_of_flour = round_up_to_even(flour_needed)
     return actual_amount_of_flour
 
 
@@ -89,4 +90,4 @@ def money_spent_on_b(actual_amount_of_flour):
 
 
 # execute function
-flour_order(100, 300, 100, 150)
+flour_order(10, 30, 10, 50)
