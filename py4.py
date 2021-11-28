@@ -4,7 +4,7 @@
 # Assignment: 1
 # Author: Vu Quoc Gia Quan (s3927120)
 # Created date: 13/11/2021
-# Last modified date: 18/11/2021
+# Last modified date: 24/11/2021
 
 import turtle
 
@@ -23,11 +23,12 @@ X = -100
 Y = -100
 
 
+# define a function to help the turtle move
 def turtle_move(x, y):
     """
     A function to help the turtle move
-    :param x:
-    :param y:
+    :param x: x coordinate
+    :param y: y coordinate
     :return:
     """
     tito.up()
@@ -35,6 +36,7 @@ def turtle_move(x, y):
     tito.down()
 
 
+# define a function to draw x and y axis
 def draw_x_and_y_axis(lengths):
     """
     Draw the x and y axis based on a given length
@@ -51,6 +53,7 @@ def draw_x_and_y_axis(lengths):
     tito.stamp()
 
 
+# define draw_category function
 def draw_category(lengths, color_type):
     """
     Draw a bar chart for a give category and add color
@@ -91,6 +94,7 @@ def draw_category(lengths, color_type):
     turtle_move(a, b)
 
 
+# define a function to add date to chart
 def add_date(date):
     # moving the turtle to desired position to add date
     turtle_move(-50, -100)
@@ -104,6 +108,7 @@ def add_date(date):
     tito.write(date)
 
 
+# define a function to calculate sum of pizzas
 def add_total_number_of_pizza(a, b, c, d):
     """
     Add total number of pizza on top of the bar chart
@@ -116,6 +121,7 @@ def add_total_number_of_pizza(a, b, c, d):
     tito.write(a + b + c + d)
 
 
+# define draw_bar_chart function
 def draw_bar_chart(date, large_thick, large_thin, medium_thick, medium_thin):
     """
     Run the programme to draw a bar chart

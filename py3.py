@@ -4,12 +4,13 @@
 # Assignment: 1
 # Author: Vu Quoc Gia Quan (s3927120)
 # Created date: 13/11/2021
-# Last modified date: 18/11/2021
+# Last modified date: 24/11/2021
 
 # import the math function
 import math
 
 
+# define flour_order function
 def flour_order(large_thick, large_thin, medium_thick, medium_thin):
     """
     Decide between provider A and B based on amount of flour needed
@@ -41,6 +42,7 @@ def round_up_to_even(a):
     return math.ceil(a / 2.) * 2
 
 
+# define flour_amount function
 def flour_amount(large_thick, large_thin, medium_thick, medium_thin):
     """
     Calculate the actual amount of flour needed
@@ -56,6 +58,7 @@ def flour_amount(large_thick, large_thin, medium_thick, medium_thin):
     return actual_amount_of_flour
 
 
+# define money_spent_on_a function
 def money_spent_on_a(actual_amount_of_flour):
     """
     Calculate the amount of money needed to when buying from A
@@ -64,12 +67,13 @@ def money_spent_on_a(actual_amount_of_flour):
     """
     money_a = actual_amount_of_flour * 30000
     if actual_amount_of_flour < 30:
-        money_a - money_a * 0.03
+        money_a -= money_a * 0.03
     else:
-        money_a - money_a * 0.05
+        money_a -= money_a * 0.05
     return money_a
 
 
+# define money_spent_on_b function
 def money_spent_on_b(actual_amount_of_flour):
     """
     Calculate the amount of money needed to when buying from B
@@ -78,9 +82,9 @@ def money_spent_on_b(actual_amount_of_flour):
     """
     money_b = actual_amount_of_flour * 31000
     if actual_amount_of_flour < 40:
-        money_b - money_b * 0.05
+        money_b -= money_b * 0.05
     else:
-        money_b - money_b * 0.1
+        money_b -= money_b * 0.1
     return money_b
 
 
